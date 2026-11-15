@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>智慧助老陪护机器人 - 产品介绍</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft YaHei", sans-serif;
+        }
+        body {
+            background-color: #f7f9fc;
+            color: #2c3e50;
+            line-height: 1.7;
+        }
+        /* 滚动淡入动画 */
+        .fade-section {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.7s ease;
+        }
+        .fade-section.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        header {
+            background: linear-gradient(135deg, #5b6cd9, #3449b5);
+            color: white;
+            text-align: center;
+            padding: 70px 20px;
+        }
+        header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 12px;
+        }
+        header p {
+            font-size: 1.15rem;
+            opacity: 0.92;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        nav {
+            background: #ffffff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 0;
+            z-index: 99;
+        }
+        .nav-wrap {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 6px;
+            padding: 14px;
+        }
+        .nav-wrap a {
+            text-decoration: none;
+            color: #3449b5;
+            font-weight: 550;
+            padding: 8px 16px;
+            border-radius: 24px;
+            transition: 0.3s;
+        }
+        .nav-wrap a:hover {
+            background-color: #5b6cd9;
+            color: white;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 50px 20px;
+        }
+        section {
+            margin-bottom: 60px;
+            background: #fff;
+            padding: 36px;
+            border-radius: 18px;
+            box-shadow: 0 4px 16px rgba(91, 108, 217, 0.12);
+        }
+        section h2 {
+            color: #3449b5;
+            font-size: 1.9rem;
+            margin-bottom: 20px;
+            border-left: 6px solid #5b6cd9;
+            padding-left: 14px;
+        }
+        .card-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 24px;
+            margin-top: 24px;
+        }
+        .card {
+            background: #f3f6ff;
+            padding: 26px;
+            border-radius: 16px;
+            transition: all 0.35s ease;
+            border: 1px solid #e6eafb;
+        }
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 24px rgba(91, 108, 217, 0.18);
+        }
+        .card h3 {
+            color: #3449b5;
+            margin-bottom: 10px;
+        }
+        .btn {
+            display: inline-block;
+            background: #5b6cd9;
+            color: white;
+            padding: 12px 26px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 16px;
+            transition: 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background: #3449b5;
+            transform: scale(1.04);
+        }
+        footer {
+            background: #2c3463;
+            color: #dcdff3;
+            text-align: center;
+            padding: 35px 20px;
+        }
+        @media (max-width: 700px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            section {
+                padding: 24px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>智慧助老陪护机器人</h1>
+        <p>面向居家老人的智能陪伴、健康监测与紧急救助一体化解决方案｜小组项目展示</p>
+    </header>
+
+    <nav>
+        <div class="nav-wrap">
+            <a href="#bg">研发背景</a>
+            <a href="#pain">现存痛点</a>
+            <a href="#solution">解决方案</a>
+            <a href="#function">核心功能</a>
+            <a href="#advantage">产品优势</a>
+            <a href="#team">小组团队</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <section id="bg" class="fade-section">
+            <h2>一、研发背景</h2>
+            <p>我国老龄化程度持续加深，独居、空巢老人数量逐年上涨。很多老年人独自居家，子女无法时刻陪伴在身边。老人容易遇到突发疾病跌倒、忘记吃药、孤独抑郁、不会使用复杂智能设备等问题。市面上多数设备功能单一，要么只可以测健康数据，要么只有简单语音对话，缺少一套集陪伴、监测、报警、提醒为一体的轻量化智能终端。
+            <br><br>基于这个社会现状，我们小组设计这款助老陪护机器人，用低成本嵌入式硬件搭配智能交互程序，给居家老人提供全天候的看护支持，减轻子女照料压力。</p>
+        </section>
+
+        <section id="pain" class="fade-section">
+            <h2>二、现存痛点</h2>
+            <div class="card-row">
+                <div class="card">
+                    <h3>紧急风险难预警</h3>
+                    <p>老人摔倒、突发不适时，无法第一时间通知家属，错过最佳救助时机。</p>
+                </div>
+                <div class="card">
+                    <h3>日常照护缺失</h3>
+                    <p>经常忘记服药、复诊；缺少陪伴，长期独处容易产生孤单、消极情绪。</p>
+                </div>
+                <div class="card">
+                    <h3>设备操作门槛高</h3>
+                    <p>智能手机、手环操作复杂，很多老年人学习困难，不愿意使用。</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="solution" class="fade-section">
+            <h2>三、我们的解决方案</h2>
+            <p>我们的助老机器人以嵌入式主控作为核心，搭配语音交互模块、人体感应、心率血氧采集、跌倒识别模块，搭载轻量化本地程序，不需要老人复杂操作。
+            <br><br>✅ 老人可以直接语音发起对话、播放戏曲、新闻、设置提醒；
+            <br>✅ 传感器持续采集健康数据，异常自动记录；
+            <br>✅ 检测跌倒或者老人一键呼救，自动推送消息给绑定的家属；
+            <br>✅ 家属小程序端远程查看老人状态，接收告警信息；
+            <br>✅ 整体设计简化交互，大语音、大提示，适配老年人使用习惯。
+            </p>
+        </section>
+
+        <section id="function" class="fade-section">
+            <h2>四、核心功能模块</h2>
+            <div class="card-row">
+                <div class="card">
+                    <h3>语音陪伴交互</h3>
+                    <p>语音聊天、播放音乐、戏曲、天气预报，简单语音指令即可控制。</p>
+                </div>
+                <div class="card">
+                    <h3>健康监测</h3>
+                    <p>心率、血氧定时采集，记录健康档案，数据异常提醒。</p>
+                </div>
+                <div class="card">
+                    <h3>跌倒检测 + 一键求救</h3>
+                    <p>自动识别跌倒，同时机身配备实体紧急呼救按钮，触发后通知家人。</p>
+                </div>
+                <div class="card">
+                    <h3>智能定时提醒</h3>
+                    <p>吃药提醒、复诊提醒、喝水休息提醒，自定义时间。</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="advantage" class="fade-section">
+            <h2>五、产品优势</h2>
+            <ul style="padding-left: 22px; font-size:1.05rem;">
+                <li>轻量化本地运行，不依赖高速网络，断网基础功能依旧可用</li>
+                <li>交互极简，不需要触屏复杂操作，主打语音控制</li>
+                <li>性价比高，硬件方案成本可控，适合家庭普及</li>
+                <li>兼顾情感陪伴和安全监护，不止是监测设备</li>
+                <li>数据安全优先，老人健康信息本地存储，按需上传</li>
+            </ul>
+            <a class="btn" href="#team">查看我们小组</a>
+        </section>
+
+        <section id="team" class="fade-section">
+            <h2>六、小组团队</h2>
+            <p>本项目为课程小组科创作品，分工包含硬件搭建、嵌入式程序开发、后端消息推送、前端展示网页、需求调研与产品文案。我们希望用技术为老年群体带来更安全、温暖的居家养老方案。</p>
+        </section>
+    </div>
+
+    <footer>
+        <p>智慧助老陪护机器人｜小组科创项目 · elderly_robot.html</p>
+    </footer>
+
+    <script>
+        // 滚动淡入
+        const fadeItems = document.querySelectorAll('.fade-section');
+        function checkFade(){
+            fadeItems.forEach(el=>{
+                const rect = el.getBoundingClientRect();
+                if(rect.top < window.innerHeight - 100){
+                    el.classList.add('active');
+                }
+            })
+        }
+        window.addEventListener('scroll', checkFade);
+        window.addEventListener('load', checkFade);
+    </script>
+</body>
+</html>
+
